@@ -23,12 +23,11 @@ const { Header, Footer } = Layout;
 
 const styles = {
   content: {
-    display: "flex",
+    // display: "flex",
     justifyContent: "center",
     fontFamily: "Roboto, sans-serif",
     color: "#041836",
-    marginTop: "130px",
-    padding: "10px",
+    marginTop: "50px",
   },
   header: {
     position: "fixed",
