@@ -1,10 +1,11 @@
 import { useMoralisDapp } from "providers/MoralisDappProvider/MoralisDappProvider";
 import { useMoralis } from "react-moralis";
 import { getEllipsisTxt } from "helpers/formatters";
-import Blockie from "./Blockie";
+import Blockie from "../Blockie";
 import { Button, Card, Modal } from "antd";
 import { useState } from "react";
-import Address from "./Address/Address";
+//import Address from "../Address/Address";
+import Address from "../Address/Address";
 import { SelectOutlined } from "@ant-design/icons";
 import { getExplorer } from "helpers/networks";
 const styles = {
@@ -22,6 +23,7 @@ const styles = {
   text: {
     color: "#21BF96",
   },
+
 };
 
 function Account() {
@@ -48,6 +50,7 @@ function Account() {
         </p>
         <Blockie currentWallet scale={3} />
       </div>
+      <i className='disconnectMobile' style={{color:'red', fontSize:'35px'}} className="fa-solid fa-right-to-bracket"></i>  
       <Modal
         visible={isModalVisible}
         footer={null}

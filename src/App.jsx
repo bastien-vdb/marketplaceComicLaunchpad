@@ -7,7 +7,7 @@ import {
   NavLink,
   Redirect,
 } from "react-router-dom";
-import Account from "components/Account";
+import Account from "components/Account/Account";
 import Chains from "components/Chains";
 import NFTBalance from "components/NFTBalance";
 import NFTTokenIds from "components/NFTTokenIds";
@@ -25,7 +25,7 @@ const styles = {
   content: {
     // display: "flex",
     justifyContent: "center",
-    fontFamily: "Roboto, sans-serif",
+    //fontFamily: "Roboto, sans-serif",
     color: "#041836",
     marginTop: "50px",
   },
@@ -37,7 +37,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    fontFamily: "Roboto, sans-serif",
+    //fontFamily: "Roboto, sans-serif",
     borderBottom: "2px solid rgba(0, 0, 0, 0.06)",
     padding: "0 10px",
     boxShadow: "0 1px 10px rgb(151 164 175 / 10%)",
@@ -81,14 +81,14 @@ const App = ({ isServerInfo }) => {
             }}
             defaultSelectedKeys={["HomePage"]}
           >
+            <Menu.Item key="HomePage">
+              <NavLink to="/HomePage">📑 Last collection</NavLink>
+            </Menu.Item>
             <Menu.Item key="nftMarket" onClick={() => setInputValue("explore")} >
               <NavLink to="/NFTMarketPlace">🛒 Explore Market</NavLink>
             </Menu.Item>
             <Menu.Item key="nft">
-              <NavLink to="/nftBalance">🖼 Your Collection</NavLink>
-            </Menu.Item>
-            <Menu.Item key="HomePage">
-              <NavLink to="/HomePage">📑 Your Transactions</NavLink>
+              <NavLink to="/nftBalance">🖼 My NFTs</NavLink>
             </Menu.Item>
           </Menu>
           <div style={styles.headerRight}>
@@ -112,7 +112,7 @@ const App = ({ isServerInfo }) => {
           <Redirect to="/HomePage" />
         </div>
       </Router>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </Layout>
   );
 };

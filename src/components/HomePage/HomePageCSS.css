@@ -7,8 +7,8 @@
 :root {
     --color1: #000000;
     --color2: #ffffff;
-    --color3: #d02561;
-    --color4: #04091a;
+    --color3: #2DAAE1;
+    --color4: #2DAAE1;
     --color5: #707070;
 }
 
@@ -61,6 +61,36 @@ a .btn {
 }
 
 /* Accueil */
+
+.heroHome {
+    height: 100vh;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleHome {
+    justify-content: center;
+    align-items: center;
+    padding-top: 250px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+/* .heroHome:after {
+    content:'';
+    display: block;
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 1) 100%);
+} */
+
 .hero {
     height: 100vh;
     display: flex;
@@ -146,16 +176,17 @@ a .btn {
     display: flex;
 }
 
-/* Discord */
-.discord {
+/* Info */
+.info {
     background: var(--color2);
     padding: 4rem 0;
     text-align: center;
+    display: flex;
 }
 
-.discord h2 {
+.info h2 {
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 /* RoadMap */
@@ -237,7 +268,7 @@ a .btn {
 }
 
 .team .member {
-    width: 31%;
+    width: 23%;
 }
 
 .team .member img {
