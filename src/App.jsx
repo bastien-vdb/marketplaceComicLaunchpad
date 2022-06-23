@@ -69,16 +69,9 @@ const App = ({ isServerInfo }) => {
         <Header style={styles.header}>
           <Logo />
           <SearchCollections setInputValue={setInputValue}/>
-          <Menu
+          <Menu className="mainMenu"
             theme="light"
             mode="horizontal"
-            style={{
-              display: "flex",
-              fontSize: "17px",
-              fontWeight: "500",
-              marginLeft: "50px",
-              width: "100%",
-            }}
             defaultSelectedKeys={["HomePage"]}
           >
             <Menu.Item key="HomePage">
@@ -91,6 +84,13 @@ const App = ({ isServerInfo }) => {
               <NavLink to="/nftBalance">🖼 My NFTs</NavLink>
             </Menu.Item>
           </Menu>
+          <a href="#">
+            <div className="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+          </a>
           <div style={styles.headerRight}>
             <Chains />
             <NativeBalance />

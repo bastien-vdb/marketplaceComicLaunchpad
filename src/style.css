@@ -6,15 +6,46 @@
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
-  border-bottom: 2px solid #21bf96 !important;
+  border-bottom: 2px solid #2DAAE1 !important;
 }
 
 .ant-menu-horizontal > .ant-menu-item-selected a,
 .ant-menu-horizontal > .ant-menu-item a:hover {
-  color: #21bf96 !important;
+  color: #2DAAE1 !important;
 }
 
 .ant-modal-content {
   overflow: auto;
   border-radius: 1rem;
+}
+
+.mainMenu{
+  display: flex;
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 50px;
+  width: 100%;
+}
+
+.burgerMenu {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 3vh;
+  margin: 10px;
+}
+
+.burgerMenu span {
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: black;
+  border: 1.5px solid black;
+}
+
+@media (max-width: 1020px) {
+  .mainMenu {
+    display: none;
+  }
 }

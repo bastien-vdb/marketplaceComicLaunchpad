@@ -8,18 +8,8 @@ import { useState } from "react";
 import Address from "../Address/Address";
 import { SelectOutlined } from "@ant-design/icons";
 import { getExplorer } from "helpers/networks";
+import './accountCSS.css';
 const styles = {
-  account: {
-    height: "42px",
-    padding: "0 15px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "fit-content",
-    borderRadius: "12px",
-    backgroundColor: "rgb(244, 244, 244)",
-    cursor: "pointer",
-  },
   text: {
     color: "#21BF96",
   },
@@ -34,7 +24,7 @@ function Account() {
   if (!isAuthenticated) {
     return (
       <div
-        style={styles.account}
+        className="account"
         onClick={() => authenticate({ signingMessage: "Hello World!" })}
       >
         <p style={styles.text}>Authenticate</p>
@@ -44,13 +34,15 @@ function Account() {
 
   return (
     <>
-      <div style={styles.account} onClick={() => setIsModalVisible(true)}>
-        <p style={{ marginRight: "5px", ...styles.text }}>
-          {getEllipsisTxt(walletAddress, 6)}
-        </p>
-        <Blockie currentWallet scale={3} />
-      </div>
-      <i className='disconnectMobile' style={{color:'red', fontSize:'35px'}} className="fa-solid fa-right-to-bracket"></i>  
+      <div className="account" onClick={() => setIsModalVisible(true)}>
+        <div className="largeView">
+          <p style={{ marginRight: "5px", ...styles.text }}>
+            {getEllipsisTxt(walletAddress, 6)}
+          </p>
+          <Blockie currentWallet scale={3} />
+        </div>
+        <i className="fa-solid fa-right-to-bracket disconnectMobile"></i>
+      </div>  
       <Modal
         visible={isModalVisible}
         footer={null}
