@@ -17,6 +17,12 @@
 .ant-modal-content {
   overflow: auto;
   border-radius: 1rem;
+  background-color: aliceblue;
+  opacity: 0.97;
+}
+
+.ant-btn[disabled], .ant-btn[disabled]:hover, .ant-btn[disabled]:focus, .ant-btn[disabled]:active {
+  display: none;
 }
 
 .mainMenu{
@@ -28,7 +34,7 @@
 }
 
 .burgerMenu {
-  display: flex;
+  display: none;
   position: relative;
   flex-direction: column;
   justify-content: space-between;
@@ -44,8 +50,24 @@
   border: 1.5px solid black;
 }
 
+.burgerMenuModal ul li {
+  padding:10px;
+  font-weight: bold;
+  font-size: 30px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.burgerMenuModal ul li:hover {
+  border: 1px solid black;
+}
+
 @media (max-width: 1020px) {
   .mainMenu {
     display: none;
+  }
+
+  .burgerMenu {
+    display: flex;
   }
 }

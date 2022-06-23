@@ -11,7 +11,7 @@ import Account from "components/Account/Account";
 import Chains from "components/Chains";
 import NFTBalance from "components/NFTBalance";
 import NFTTokenIds from "components/NFTTokenIds";
-import { Menu, Layout} from "antd";
+import { Menu, Layout, Button, Modal} from "antd";
 import SearchCollections from "components/SearchCollections";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
@@ -54,9 +54,21 @@ const App = ({ isServerInfo }) => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
     useMoralis();
 
-
-
   const [inputValue, setInputValue] = useState("explore");
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
 
   useEffect(() => {
     if (isAuthenticated && !isWeb3Enabled && !isWeb3EnableLoading) enableWeb3();
@@ -84,6 +96,7 @@ const App = ({ isServerInfo }) => {
               <NavLink to="/nftBalance">🖼 My NFTs</NavLink>
             </Menu.Item>
           </Menu>
+          <button style={{border:'none', backgroundColor:'transparent'}} onClick={showModal}>
           <a href="#">
             <div className="burgerMenu">
                 <span></span>
@@ -91,12 +104,29 @@ const App = ({ isServerInfo }) => {
                 <span></span>
             </div>
           </a>
+          </button>
           <div style={styles.headerRight}>
             <Chains />
             <NativeBalance />
             <Account />
           </div>
         </Header>
+        <Modal 
+        title="Menu" 
+        theme="dark"
+        visible={isModalVisible}
+        okText="Close"
+        cancelButtonProps={{disabled:true}}
+        onOk={handleOk} 
+        onCancel={handleCancel}>
+          <div className="burgerMenuModal">
+            <ul>         
+              <li><NavLink to="/HomePage">📑 Last collection</NavLink></li>
+              <li><NavLink to="/NFTMarketPlace">🛒 Explore Market</NavLink></li>
+              <li><NavLink to="/nftBalance">✨ My NFTs</NavLink></li>
+            </ul>
+          </div>
+      </Modal>
         <div style={styles.content}>
           <Switch>
             <Route path="/nftBalance">
