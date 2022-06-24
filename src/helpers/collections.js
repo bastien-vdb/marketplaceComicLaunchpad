@@ -1,4 +1,20 @@
 export const networkCollections = {
+  "0x4": [
+    //Add Your Collections here
+    {
+      image:
+        "https://lh3.googleusercontent.com/BWCni9INm--eqCK800BbRkL10zGyflxfPwTHt4XphMSWG3XZvPx1JyGdfU9vSor8K046DJg-Q8Y4ioUlWHiCZqgR_L00w4vcbA-w=s0",
+      name: "Art blocks",
+      addrs: "0x7b404C05733344eA9a618b95B21Ad27090B53456",
+    },
+    {
+      image:
+        "https://ipfs.moralis.io:2053/ipfs/QmfLbpeVHxReWKNLaXTPcWiafi49eoAL4gRwMGuXtx2Eqe/images/14.png",
+      name: "KryptoKitties",
+      addrs: "0x16baF0dE678E52367adC69fD067E5eDd1D33e3bF",
+    },
+  ],
+
   "0x13881": [
     //Add Your Collections here
     {

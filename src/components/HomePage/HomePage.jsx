@@ -65,36 +65,34 @@ let tl = gsap.timeline();
             <section className='heroHome'>
                 <div className='titleHome'>
                     <h2 style={{color:'white'}}><strong><span className='red'>COMIC FRIEND</span></strong><br/>Museum connected to the WEB3</h2>
-                    
-                    <i style={{color:'red'}} className="fa-solid fa-right-to-bracket"></i>   
                 </div>
             </section>
             
             <section className="hero">
                 <div className="logo">Comic Friends</div>
-                    <div style={{fontFamily:"Roboto, sans-serif"}} className="socials">
-                        <ul>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i className="fab fa-discord"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i className="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="heroG">
-                        <div style={{width:'60%'}}>
-                            <h1 style={{color:'white'}}>Connect your<span className="red"> Wallet</span></h1>
-                            <p>Connect your favorite wallet to be ready for the mint and see your minted moebius collection NFT !</p>
-                            <a href="#">
-                                <button className="btn">Authenticate</button>
+                <div style={{fontFamily:"Roboto, sans-serif"}} className="socials">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i className="fab fa-discord"></i>
                             </a>
-                        </div>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i className="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div className="heroG">
+                    <div style={{width:'60%'}}>
+                        <h1 style={{color:'white'}}>Connect your<span className="red"> Wallet</span></h1>
+                        <p>Connect your favorite wallet to be ready for the mint and see your minted moebius collection NFT !</p>
+                        <a href="#">
+                            <button className="btn">Authenticate</button>
+                        </a>
                     </div>
+                </div>
                 <div className="heroD"></div>
             </section>
 

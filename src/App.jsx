@@ -1,5 +1,6 @@
 import { useEffect, useState} from "react";
 import { useMoralis } from "react-moralis";
+import Media from 'react-media';
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,7 +28,7 @@ const styles = {
     justifyContent: "center",
     //fontFamily: "Roboto, sans-serif",
     color: "#041836",
-    marginTop: "50px",
+    marginTop: '64px',
   },
   header: {
     position: "fixed",
@@ -50,12 +51,15 @@ const styles = {
     fontWeight: "600",
   },
 };
+
+
 const App = ({ isServerInfo }) => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
     useMoralis();
 
   const [inputValue, setInputValue] = useState("explore");
 
+  //Burger show Modal
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -80,7 +84,12 @@ const App = ({ isServerInfo }) => {
       <Router>
         <Header style={styles.header}>
           <Logo />
-          <SearchCollections setInputValue={setInputValue}/>
+          <Media query="(min-width:1000px)">
+              {(matches) => matches ? (
+                <SearchCollections setInputValue={setInputValue}/>
+              ) : (<span></span>)
+            }
+          </Media>
           <Menu className="mainMenu"
             theme="light"
             mode="horizontal"
@@ -128,6 +137,11 @@ const App = ({ isServerInfo }) => {
           </div>
       </Modal>
         <div style={styles.content}>
+          <Media query="(max-width:1000px)">
+            {matches => matches ? 
+              <SearchCollections setInputValue={setInputValue}/> : <span></span>
+            }
+          </Media>
           <Switch>
             <Route path="/nftBalance">
               <NFTBalance />
