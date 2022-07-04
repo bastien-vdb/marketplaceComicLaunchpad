@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {useEffect} from 'react';
 import img10 from './img/mekas/10.png'
-import img11 from './img/mekas/11.png'
+import img11jpg from './img/mekas/AUTREIMAGE.jpg'
 import img12 from './img/mekas/12.png'
 
 function HomePage () {
@@ -158,7 +158,7 @@ let tl = gsap.timeline();
                             collectors of original boards
                             </span>
                         </h4>
-                        <img src={img11} alt="Image" />
+                        <img src={img11jpg} alt="Imagejpg" />
                         </div>
                         <div className="member" data-aos="zoom-in">
                         <h4>
@@ -238,7 +238,7 @@ let tl = gsap.timeline();
                         <div className="team__flex">
                             <div className="member" data-aos="zoom-in">
                                 <h4>Bastien <br/><span className="job">Blockchain Developper</span></h4>
-                                <img src={img11} alt="Bastien VDB" />
+                                <img src={img11jpg} alt="Bastien VDB" />
                             </div>
                             <div className="member" data-aos="zoom-in">
                                 <h4>Adrien <br/><span className="job">Coordinator</span></h4>
@@ -250,7 +250,7 @@ let tl = gsap.timeline();
                             </div>
                             <div className="member" data-aos="zoom-in">
                                 <h4>Rubens <br/><span className="job">Marketer</span></h4>
-                                <img src={img11} alt="Rubens" />
+                                <img src={img11jpg} alt="Rubens" />
                             </div>
                         </div>
                     </div>

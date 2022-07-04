@@ -84,7 +84,7 @@ const App = ({ isServerInfo }) => {
       <Router>
         <Header style={styles.header}>
           <Logo />
-          <Media query="(min-width:1000px)">
+          <Media query="(min-width:600px)">
               {(matches) => matches ? (
                 <SearchCollections setInputValue={setInputValue}/>
               ) : (<span></span>)
@@ -137,7 +137,7 @@ const App = ({ isServerInfo }) => {
           </div>
       </Modal>
         <div style={styles.content}>
-          <Media query="(max-width:1000px)">
+          <Media query="(max-width:600px)">
             {matches => matches ? 
               <SearchCollections setInputValue={setInputValue}/> : <span></span>
             }

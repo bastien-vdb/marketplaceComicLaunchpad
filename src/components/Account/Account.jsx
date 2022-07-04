@@ -41,7 +41,7 @@ function Account() {
           </p>
           <Blockie currentWallet scale={3} />
         </div>
-        <i className="fa-solid fa-right-to-bracket disconnectMobile"></i>
+        <i className="fa-solid fa-right-from-bracket disconnectMobile"></i>
       </div>  
       <Modal
         visible={isModalVisible}
